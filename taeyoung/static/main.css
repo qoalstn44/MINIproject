@@ -31,7 +31,6 @@
     padding:10px 10px;
     border-radius: 14px;
 }
-
 .intro{
     display: flex;
     align-items: center;
@@ -39,7 +38,7 @@
 }
 .container{
     width: 1100px;
-    padding:48px;
+    padding:48px 0;
     margin:0 auto;
 }
 
@@ -56,6 +55,20 @@
 }
 .box{
     margin-top: 40px;
+}
+.introWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxes{
+    flex:1;
+}
+.icon{
+    flex:1
+}
+.icon img{
+    width: 100%;
 }
 .sub_title{
     display: inline-block;
@@ -139,14 +152,17 @@
     margin-top: 16px;
 }
 .btn{
+    display: block;
     width: 100%;
     background: darkblue;
     color:#fff;
     border:none;
     font-family: 'Tenada';
     font-size: 18px;
-    padding:8px 16px;
+    padding:16px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 .btn:hover{
     background: #efefef;
@@ -187,4 +203,128 @@
     border-bottom: 1px solid #ddd;
     padding:16px;
     margin-bottom: 16px;
+}
+
+/*모달레이어*/
+.modalLayer{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height:100vh;
+    background: rgba(0,0,0,.6);
+    display: none;
+}
+.modalWrap{
+    position: relative;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 600px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding:24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    display: none;
+}
+
+.modalCon{
+    width: 100%;
+    padding:16px;
+    display: flex;
+    gap:24px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.modalimg{
+    width: 240px;
+    height: 240px;
+}
+.modalimg img{
+    width: 100%;
+}
+.desc{
+    width: calc(100% - 240px);
+}
+.desc > p{
+    margin-bottom: 16px;
+}
+
+.desc > p > span{
+  border-radius: 50px;
+    padding:8px;
+    border:2px solid darkblue;
+    font-family: 'Tenada';
+    background: darkblue;
+    color:#fff;
+    font-size: 18px;
+    display: inline-block;
+}
+.desc > p > .block{
+    display: block;
+    border: none;
+}
+
+
+.selfIntro{
+    width: 100%;
+    padding:16px;
+    margin-top: 24px;
+}
+.selfIntro h3{
+    border-radius: 50px;
+    padding:8px;
+    border:2px solid darkblue;
+    font-family: 'Tenada';
+    background: darkblue;
+    color:#fff;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+.selfIntro p{
+    margin-bottom:8px;
+}
+
+.blogbtn{
+    padding:24px  16px;
+  text-align: center;
+    flex:1;
+    font-size: 23px;
+    cursor:pointer;
+     font-family: 'Tenada';
+    background: darkblue;
+    color:#fff;
+}
+.blogbtn:hover{
+    background: yellow;
+    color:darkblue;
+    cursor: pointer;
+}
+.cancel{
+    padding:24px 16px;
+    text-align: center;
+    flex:1;
+    font-size: 23px;
+    cursor:pointer;
+     font-family: 'Tenada';
+    background: #ddd;
+}
+.cancel:hover{
+     background: black;
+    color:#fff;
+    cursor: pointer;
+}
+.modalbottom{
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-top:1px solid #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
