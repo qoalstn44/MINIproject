@@ -1,0 +1,31 @@
+body{
+    background-color: #FFF8EA;
+}
+
+.box1{
+    margin: 50px 50px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-radius: 10%;
+    width: 750px;
+    height: 900px;
+    background-color: #9E7676;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+}
+
+
+.box2{
+    margin: 20px 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 10%;
+    width: 500px;
+    height: 350px;
+    background-color: #815B5B;
+    place-items: center;
+    
+}
