@@ -8,11 +8,58 @@
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
-	
-	
+	<link rel="stylesheet" href="./static/sub.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+
+
+<!-- 최지원 작성 -->
+
+<script>
+	function darkMode() {
+		let body = document.body;
+		body.classList.toggle("dark-mode");
+	}
+</script>
+
+
+<script>
+				$(document).ready(function () {
+					$.ajax({
+						type: "GET",
+						url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+						data: {},
+						success: function (response) {
+							$('#temp').text(response['temp'])
+							document.getElementById('icon').src = response['icon']
+							$('#city').text(response['city'])
+							$('#clouds').text(response['clouds'])
+						}
+					})
+				});
+</script>
+
+	</head>
+
+
 <body>
+
+
+<div class="navbar">
+	<nav class="gnb-menu">
+		<p style="margin-bottom: 30px;">
+			<span id="city"></span> 
+			<img id="icon" src="">
+			<span></span> 
+			<span id="icon"></span> 
+			<span id="clouds"></span> 
+			<span id="temp"></span>℃
+		</p>	
+		<button class="darkbtn" onclick="darkMode()">Dark Mode</button>
+	</nav>
+</div>
+
+<!-- 여기까지 -->
+
 <div class="wrap">
 	<section class="header">
 		<h1 class="title">oneBillon</h1>
@@ -57,7 +104,7 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>배민수</p>
-						<p class="txt">안녕하세요. 저는 1조의 팀장을 맡고있는 배민수 입니다.</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
 				</div>
@@ -66,7 +113,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="name"><span class="sub_title">이름</span>성태영</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
@@ -89,7 +136,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="name"><span class="sub_title">이름</span>김도훈</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
@@ -99,7 +146,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="name"><span class="sub_title">이름</span>송지현</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
@@ -114,38 +161,10 @@
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 				</div>
 				<div class="desc">
-					<p><span>이름</span> 배민수</p>
-					<p><span>MBTI</span> ENFP</p>
-					<p><span>취미</span> 배드민턴🏸</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
-					<p>
-						<span>프로젝트 맡은 역활</span>
-						
-					<p class="block">지금 보이시는 웹페이지를 꾸미고 작성했습니다!</p>
-					</p>
-				</div>
-			</div>
-			<div class="selfIntro">
-				<h3>자기소개</h3>
-				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-				<p>d앞으로 잘부탁드렵용</p>
-			</div>
-			<div class="modalbottom">
-				<a class="blogbtn" herf="https://velog.io/@qoalstn44" target="_blank">개인블로그 가기</a>
-				<span class="cancel" onclick="cancel()">닫기</span>
-			</div>
-		</div>
-	<div class="modalWrap modal2">
-			<div class="modalCon">
-				<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
-				</div>
-				<div class="desc">
-					<p><span>이름</span> 성태영</p>
+					<p><span>이름</span>배민수</p>
 					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
 					<p><span>취미</span>ㅇㅇ</p>
-					<p><span></span>
+					<p>
 						<span>일 스타일</span>
 					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
 					</p>
@@ -158,7 +177,33 @@
 				<p>d앞으로 잘부탁드렵용</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" href="https://velog.io/@qoalstn44" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
+			</div>
+		</div>
+	<div class="modalWrap modal2">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span> 성태영</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
+			</div>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@young0_0" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
@@ -184,7 +229,7 @@
 				<p>d앞으로 잘부탁드렵용</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" href="https://velog.io/@jiwonchoii" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
@@ -210,7 +255,7 @@
 				<p>d앞으로 잘부탁드렵용</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" href="https://velog.io/@syncstar" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
@@ -236,7 +281,7 @@
 				<p>d앞으로 잘부탁드렵용</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" href="https://velog.io/@songjihyun_dev" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>

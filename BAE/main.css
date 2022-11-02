@@ -1,4 +1,10 @@
+
+
+
+
 /*폰트*/
+
+
 @font-face {
     font-family: 'Tenada';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
@@ -144,7 +150,6 @@
 }
 .textWrap{
     padding:24px  ;
-    position: relative; /*김도훈 좋아요 추가 2022 11 02 16:00*/
 }
 .name{
     margin-top: 16px;
@@ -246,7 +251,6 @@
 }
 .modalimg img{
     width: 100%;
-    background-position: center;
 }
 .desc{
     width: calc(100% - 240px);
@@ -300,6 +304,7 @@
      font-family: 'Tenada';
     background: darkblue;
     color:#fff;
+    
 }
 .blogbtn:hover{
     background: yellow;
@@ -330,21 +335,3 @@
     justify-content: center;
     align-items: center;
 }
-/*김도훈님*/
-.like_btn{
-    margin: 0;
-    padding: 0;
-    position: absolute;  
-    top: 20px; 
-    right:10px;
-    background: transparent;
-    border: none;
-    margin: 20px;
-    font-size: 24px; 
-    color: gray;
-}
-
-.like_btn i:hover{
-    cursor: pointer;
-}/*김도훈님*/
-a { text-decoration:none }

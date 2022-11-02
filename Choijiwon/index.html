@@ -8,62 +8,17 @@
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
-	<link rel="stylesheet" href="./static/sub.css"><!--/*최지원님 작성*/-->
 	<script src="https://kit.fontawesome.com/9e8b7f079e.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src=“https://kit.fontawesome.com/3e498796cb.js” crossorigin=“anonymous”></script><!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+
 	<style type="text/css">
 		/* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 #c71d44 설정 */
 		a:visited { color: #c71d44; text-decoration: none;}	
 		/* hover - 마우스를 해당 링크에 위치했을 경우 #006DD7 설정 */
 		a:hover { color:pink; text-decoration: underline;}
 	   </style>
-
-<!--/*최지원님 작성*/-->
-
-	<script>
-		function darkMode() {
-			let body = document.body;
-			body.classList.toggle("dark-mode");
-		}
-	</script>
-
-	<script>
-		$(document).ready(function () {
-			$.ajax({
-				type: "GET",
-				url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-				data: {},
-				success: function (response) {
-					$('#temp').text(response['temp'])
-					document.getElementById('icon').src = response['icon']
-					$('#city').text(response['city'])
-					$('#clouds').text(response['clouds'])
-				}
-			})
-		});
-	</script>
-
 </head>
-
 <body>
-
-	<div class="navbar">
-		<nav class="gnb-menu">
-			<p style="margin-bottom: 30px;">
-				<span id="city"></span> 
-				<img id="icon" src="">
-				<span></span> 
-				<span id="icon"></span> 
-				<span id="clouds"></span> 
-				<span id="temp"></span>
-				<span>℃</span>
-			</p>	
-			<button class="darkbtn" onclick="darkMode()">Dark Mode</button>
-		</nav>
-	</div>
-<!--/*최지원님 작성*/-->
-
 <div class="wrap">
 	<section class="header">
 		<h1 class="title">oneBillon</h1>
@@ -108,9 +63,6 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>배민수</p>
-						
-						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button><!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						
 						<p class="txt">안녕하세요! 1조 팀장을 맡고있는 배민수 입니다!</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
@@ -132,7 +84,7 @@
 					
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+						<p class="txt">안녕하세요~! 팀원 최지원입니다 </p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
 				</div>
@@ -224,23 +176,23 @@
 				</div>
 				<div class="desc">
 					<p><span>이름</span>최지원</p>
-					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-					<p><span>취미</span>ㅇㅇ</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
+					<p><span>MBTI</span>ISTP</p>
+					<p><span>취미</span>운동💪</p>
+					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank"><a href="https://velog.io/@jiwonchoii" target="_blank">velog.io</a></a>&#128274;</p>
 					<p>
-						<span>일 스타일</span>
-					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+						<span>프로젝트 맡은 역할</span>
+					<p class="block">nav바를 만들고 링크를 만들었습니다. </p>
 					</p>
 				</div>
 			</div>
 			<div class="selfIntro">
 				<h3>자기소개</h3>
-				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-				<p>d앞으로 잘부탁드렵용</p>
+				<p>안녕하세요 반갑습니다 선생님들.</p>
+				<p>제 이름은 최지원이구요 개발자 지망생 입니다</p>
+				<p>많이 부족하지만 열심히 하겠습니다 남은 기간 잘 부탁드릴게요!</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" href="https://velog.io/@jiwonchoii" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
@@ -323,68 +275,6 @@
 </div>
 
 <script>
-//김도훈님
-var btnvar1 = document.getElementById('btnh1')
-	
-	function Toggle1(){
-		 
-		if(btnvar1.style.color == "red"){
-			btnvar1.style.color ="grey"
-		 
-			
-		}else{
-			btnvar1.style.color="red"
-			localStorage.setItem("like1", true)  
-		}
-		
-	} 
-
-	var btnvar2 = document.getElementById('btnh2')
-	
-	function Toggle2(){
-		if(btnvar2.style.color == "red"){
-			btnvar2.style.color ="grey"
-		}else{
-			btnvar2.style.color="red"
-		}
-		
-	} 
-
-	var btnvar3 = document.getElementById('btnh3')
-	
-	function Toggle3(){
-		if(btnvar3.style.color == "red"){
-			btnvar3.style.color ="grey"
-		}else{
-			btnvar3.style.color="red"
-		}
-		
-	} 
-
-	var btnvar4 = document.getElementById('btnh4')
-	
-	function Toggle4(){
-		if(btnvar4.style.color == "red"){
-			btnvar4.style.color ="grey"
-		}else{
-			btnvar4.style.color="red"
-		}
-		
-	} 
-
-	var btnvar5 = document.getElementById('btnh5')
-	
-	function Toggle5(){
-		if(btnvar5.style.color == "red"){
-			btnvar5.style.color ="grey"
-		}else{
-			btnvar5.style.color="red"
-		}
-		
-	} 
-</script>
-
-<script>
 	function openModal(modalname) {
 		document.get
 		$('.modalLayer').fadeIn(300)
@@ -396,7 +286,5 @@ var btnvar1 = document.getElementById('btnh1')
 		$(".modalWrap").fadeOut(300);
 	}
 </script>
-
-
 </body>
 </html>

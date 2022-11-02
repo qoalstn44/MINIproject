@@ -8,61 +8,15 @@
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
-	<link rel="stylesheet" href="./static/sub.css"><!--/*최지원님 작성*/-->
-	<script src="https://kit.fontawesome.com/9e8b7f079e.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src=“https://kit.fontawesome.com/3e498796cb.js” crossorigin=“anonymous”></script><!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-	<style type="text/css">
-		/* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 #c71d44 설정 */
-		a:visited { color: #c71d44; text-decoration: none;}	
-		/* hover - 마우스를 해당 링크에 위치했을 경우 #006DD7 설정 */
-		a:hover { color:pink; text-decoration: underline;}
-	   </style>
-
-<!--/*최지원님 작성*/-->
-
-	<script>
-		function darkMode() {
-			let body = document.body;
-			body.classList.toggle("dark-mode");
-		}
-	</script>
-
-	<script>
-		$(document).ready(function () {
-			$.ajax({
-				type: "GET",
-				url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-				data: {},
-				success: function (response) {
-					$('#temp').text(response['temp'])
-					document.getElementById('icon').src = response['icon']
-					$('#city').text(response['city'])
-					$('#clouds').text(response['clouds'])
-				}
-			})
-		});
-	</script>
-
+	<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+	<script src="https://kit.fontawesome.com/3e498796cb.js" crossorigin="anonymous"></script>
+	
 </head>
 
-<body>
+ 
 
-	<div class="navbar">
-		<nav class="gnb-menu">
-			<p style="margin-bottom: 30px;">
-				<span id="city"></span> 
-				<img id="icon" src="">
-				<span></span> 
-				<span id="icon"></span> 
-				<span id="clouds"></span> 
-				<span id="temp"></span>
-				<span>℃</span>
-			</p>	
-			<button class="darkbtn" onclick="darkMode()">Dark Mode</button>
-		</nav>
-	</div>
-<!--/*최지원님 작성*/-->
+ 
 
 <div class="wrap">
 	<section class="header">
@@ -73,6 +27,7 @@
 		<div class="container">
 			<h2 class="maintitle">팀소개</h2>
 			<p class="txt">저희는 A반 1조 onebillion 입니다.엄청나게 일찍발표하게 되어 정말이지부담스럽님만 이나ㅓㄹ이나러ㅣ나러니ㅏ러니ㅏㄹ어니아러니아러니ㅏㅇ러니아러닐어</p>
+			
 			<div class="introWrap">
 				<div class="boxes">
 					<div class="box">
@@ -107,11 +62,13 @@
 						<div class="rank">팀장</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>배민수</p>
+					<p class="name"><span class="sub_title">이름</span>최지원</p> 
+
+<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button>
+					
 						
-						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button><!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						
-						<p class="txt">안녕하세요! 1조 팀장을 맡고있는 배민수 입니다!</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
 				</div>
@@ -120,7 +77,9 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>성태영</p>
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+						<button onclick="Toggle2()" id="btnh2" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
@@ -132,6 +91,8 @@
 					
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
+<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+						<button onclick="Toggle3()" id="btnh3" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
@@ -143,7 +104,9 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>김도훈</p>
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->						
+						<button onclick="Toggle4()" id="btnh4" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
@@ -153,7 +116,9 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>송지현</p>
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->						
+						<button onclick="Toggle5()" id="btnh5" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
@@ -165,17 +130,15 @@
 	<div class="modalWrap modal1">
 			<div class="modalCon">
 				<div class="modalimg"><img
-					src="C:\Users\qoals\OneDrive\바탕 화면\123\MINIproject\사진\BAEMINSU.jpg" alt="배민수">
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 				</div>
 				<div class="desc">
-					<p><span>이름</span> 배민수</p>
-					<p><span>MBTI</span> ENFP</p>
-					<p><span>취미</span> 배드민턴🏸</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">bae_min</a>&#128274; <a href="https://velog.io/@qoalstn44" target="_blank">velog.io</a></p>
+					<p><span>이름</span>배민수</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
 					<p>
-						<span>프로젝트 맡은 역활</span>
-						
-					<p class="block">지금 보이시는 웹페이지를 꾸미고 작성했습니다!</p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
 					</p>
 				</div>
 			</div>
@@ -186,20 +149,19 @@
 				<p>d앞으로 잘부탁드렵용</p>
 			</div>
 			<div class="modalbottom">
-				<a class="blogbtn" herf="https://velog.io/@qoalstn44" target="_blank">개인블로그 가기</a>
+				<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
 	<div class="modalWrap modal2">
 			<div class="modalCon">
 				<div class="modalimg"><img
-					src="C:\Users\qoals\OneDrive\바탕 화면\123\MINIproject\사진\ty_img.jpg" alt="성태영">
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 				</div>
 				<div class="desc">
 					<p><span>이름</span> 성태영</p>
 					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
 					<p><span>취미</span>ㅇㅇ</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
 					<p>
 						<span>일 스타일</span>
 					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
@@ -220,13 +182,12 @@
 	<div class="modalWrap modal3">
 			<div class="modalCon">
 				<div class="modalimg"><img
-					src="C:\Users\qoals\OneDrive\바탕 화면\123\MINIproject\사진\최지원.jpg" alt="최지원">
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 				</div>
 				<div class="desc">
 					<p><span>이름</span>최지원</p>
 					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
 					<p><span>취미</span>ㅇㅇ</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
 					<p>
 						<span>일 스타일</span>
 					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
@@ -247,13 +208,12 @@
 	<div class="modalWrap modal4">
 			<div class="modalCon">
 				<div class="modalimg"><img
-					src="C:\Users\qoals\OneDrive\바탕 화면\123\MINIproject\사진\김도훈.jpeg" alt="김도훈">
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 				</div>
 				<div class="desc">
 					<p><span>이름</span>김도훈</p>
 					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
 					<p><span>취미</span>ㅇㅇ</p>
-					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
 					<p>
 						<span>일 스타일</span>
 					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
@@ -280,7 +240,6 @@
 					<p><span>이름</span>송지현</p>
 					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
 					<p><span>취미</span>ㅇㅇ</p>
-										<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">__bae_min__</a>&#128274;</p>
 					<p>
 						<span>일 스타일</span>
 					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
@@ -323,8 +282,8 @@
 </div>
 
 <script>
-//김도훈님
-var btnvar1 = document.getElementById('btnh1')
+//<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+	var btnvar1 = document.getElementById('btnh1')
 	
 	function Toggle1(){
 		 
@@ -384,6 +343,7 @@ var btnvar1 = document.getElementById('btnh1')
 	} 
 </script>
 
+
 <script>
 	function openModal(modalname) {
 		document.get
@@ -395,7 +355,10 @@ var btnvar1 = document.getElementById('btnh1')
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
+
 </script>
+
+
 
 
 </body>
