@@ -8,6 +8,9 @@
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
+	<!--/*최지원님 작성*/-->
+	<link rel="stylesheet" href="./static/sub.css">
+	<!--/*최지원님 작성*/-->
 	<script src="https://kit.fontawesome.com/9e8b7f079e.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -17,8 +20,52 @@
 		/* hover - 마우스를 해당 링크에 위치했을 경우 #006DD7 설정 */
 		a:hover { color:pink; text-decoration: underline;}
 	   </style>
+
+<!--/*최지원님 작성*/-->
+
+	<script>
+		function darkMode() {
+			let body = document.body;
+			body.classList.toggle("dark-mode");
+		}
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			$.ajax({
+				type: "GET",
+				url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+				data: {},
+				success: function (response) {
+					$('#temp').text(response['temp'])
+					document.getElementById('icon').src = response['icon']
+					$('#city').text(response['city'])
+					$('#clouds').text(response['clouds'])
+				}
+			})
+		});
+	</script>
+
 </head>
+
 <body>
+
+	<div class="navbar">
+		<nav class="gnb-menu">
+			<p style="margin-bottom: 30px;">
+				<span id="city"></span> 
+				<img id="icon" src="">
+				<span></span> 
+				<span id="icon"></span> 
+				<span id="clouds"></span> 
+				<span id="temp"></span>
+				<span>℃</span>
+			</p>	
+			<button class="darkbtn" onclick="darkMode()">Dark Mode</button>
+		</nav>
+	</div>
+<!--/*최지원님 작성*/-->
+
 <div class="wrap">
 	<section class="header">
 		<h1 class="title">oneBillon</h1>
