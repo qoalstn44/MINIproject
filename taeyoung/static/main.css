@@ -347,4 +347,29 @@
 .like_btn i:hover{
     cursor: pointer;
 }/*김도훈님*/
+
+/* 송지현 입력 및 수정*/
+.commenterName {
+    padding-top: 5px;
+}
+.commenterName, .commentDate {
+    font-size: 12px;
+    color: darkgray;
+}
+
+.commentBtns > input{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.commentBtns > input:hover {
+    color: white;
+    background-color: darkblue;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}/* 송지현 입력 및 수정*/
+
 a { text-decoration:none }

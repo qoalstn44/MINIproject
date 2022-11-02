@@ -299,31 +299,29 @@
 			</div>
 		</div>
 	
-
-	<section class="comment">
-		<div class="container">
-			<h2 class="maintitle">우리팀을 응원해주세요!</h2>
-			<div class="inputBox">
-				<input type="text" placeholder="우리팀을 응원해주세요">
-				<button class="cmBtn btn">댓글등록</button>
-			</div>
-			<div class="boardWrap">
-				<div class="board">
-					<p>완벽해염~</p><span>성태영</span>
-				</div>
-				<div class="board">
-					<p>완벽해염~</p><span>성태영</span>
-				</div>
-				<div class="board">
-					<p>완벽해염~</p><span>성태영</span>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
-
+<!-- 송지현 입력 및 수정 -->
+     <section class="comment">
+        <div class="container">
+          <h2 class="maintitle">우리 팀을 응원해주세요!</h2>
+          <div class="inputBox">
+			  <div>
+				  <input type="text" name="" id="commentName" placeholder="이름">
+				  <input type="password" name="" id="commentPw" placeholder="비밀번호">
+			  </div>
+            <input
+              type="text"
+              class="addComment"
+              placeholder="우리 팀을 응원해주세요"
+			  id="addCommentIpt"
+            /><button onclick="save_comment()" class="cmBtn btn">댓글 등록</button>
+          </div>
+          <div class="boardWrap">
+          </div>
+        </div>
+      </section><!-- 송지현 입력 및 수정 -->
+      
 <script>
-//김도훈님
+/* 김도훈님*/
 var btnvar1 = document.getElementById('btnh1')
 	
 	function Toggle1(){
@@ -381,8 +379,8 @@ var btnvar1 = document.getElementById('btnh1')
 			btnvar5.style.color="red"
 		}
 		
-	} 
-</script>
+	} /* 김도훈님*/
+</script> 
 
 <script>
 	function openModal(modalname) {
@@ -395,8 +393,79 @@ var btnvar1 = document.getElementById('btnh1')
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
+	$(document).ready(() => {
+		show_comment();
+	})
+	window.onload(showList)
+
+	function save_comment() {
+		let comment = $('#addCommentIpt').val();
+		let nickname = $('#commentName').val();
+		let password = $('#commentPw').val();
+		let date = new Date();
+		let year = date.getFullYear();
+		let month = String(date.getMonth() + 1).padStart(2, '0');
+		let day = String(date.getDate()).padStart(2, '0');
+		let hour = String(date.getHours()).padStart(2, '0');
+		let minute = String(date.getMinutes()).padStart(2, '0');
+		let second = String(date.getSeconds()).padStart(2, '0');
+
+		let commentTime = `${year}/${month}/${day} ${hour}:${minute}:${second}`
+		if(comment !== "" && nickname !== "" && password !== "") {
+			$.ajax({
+				type: "POST",
+				url: "/onebillion",
+				data: {
+					comment_give:comment,
+					nickname_give:nickname,
+					password_give:password,
+					time_give:commentTime
+				},
+				success: function(response) {
+					alert(response['msg'])
+					window.location.reload();
+				}
+			})
+		} else {
+			alert('빈 칸이 존재합니다!')
+		}
+	}
+
+	function show_comment() {
+		$.ajax({
+			type: "GET",
+			url: '/onebillion',
+			data: {},
+			success: function(res) {
+				let rows = res['comments'];
+				for(let i = 0; i < rows.length; i++) {
+					let comment = rows[i]['comment'];
+					let nickname = rows[i]['nickname'];
+					let time = rows[i]['time']
+					temp_html = `<div class="board">
+              						<div class="boardInfo">
+										<div class="boardComment">${comment}</div>
+										<div class="commenterName">${nickname}</div>
+										<div class="commentBtns">
+											<span class="commentDate">${time}</span>
+											<input type="button" class="edit_comment" value="수정" />
+											<input type="button" class="delete_comment" value="삭제" />
+											<div class="commentSettingBtn">
+												<input type="text" class="hidden comfirmPw" placeholder="비밀번호를 입력해주세요">
+												<input type="text" class="hidden newPw" placeholder="비밀번호를 입력해주세요">
+											</div>
+										</div>
+									</div>
+									<div class="commentBtn">
+										<input type="button" value="💜" />
+									</div>
+								</div>`
+
+						$('.boardWrap').append(temp_html)
+				}
+			}
+		})
+	}
 </script>
-
-
 </body>
 </html>
