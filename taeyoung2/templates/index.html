@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>oneBillon</title>
+	<link rel="stylesheet" href="../static/reset.css">
+	<link rel="stylesheet" href="../static/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+	<section class="header">
+		<h1 class="title">oneBillon</h1>
+		<span class="team_name">react A반 1조(배민수,성태영,최지원,송지현,김도훈)</span>
+	</section>
+	<section class="intro">
+		<div class="container">
+			<h2 class="maintitle">팀소개</h2>
+			<p class="txt">저희는 A반 1조 onebillion 입니다.엄청나게 일찍발표하게 되어 정말이지부담스럽님만 이나ㅓㄹ이나러ㅣ나러니ㅏ러니ㅏㄹ어니아러니아러니ㅏㅇ러니아러닐어</p>
+			<div class="introWrap">
+				<div class="boxes">
+					<div class="box">
+						<span class="sub_title">우리팀 소개</span>
+						<p>러니라ㅓㄴㅇ라ㅓ니러니</p>
+					</div>
+					<div class="box">
+						<span class="sub_title">우리팀 스타일</span>
+						<p>러니라ㅓㄴㅇ라ㅓ니러니</p>
+					</div>
+					<div class="box">
+						<span class="sub_title">우리팀은 이래요.</span>
+						<p>러니라ㅓㄴㅇ라ㅓ니러니</p>
+					</div>
+					<div class="box">
+						<span class="sub_title">우리팀 약속</span>
+						<p>러니라ㅓㄴㅇ라ㅓ니러니</p>
+					</div>
+				</div>
+				<div class="icon">
+					<img src="http://bizfocus.kr/news/data/20200917/p1065589653063656_140_thum.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="members">
+		<div class="container ">
+			<h2 class="maintitle">팀원 소개</h2>
+			<div class="team">
+				<div class="item">
+					<div class="img">
+						<div class="rank">팀장</div>
+					</div>
+					<div class="textWrap">
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+					</div>
+					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
+				</div>
+				
+				<!--				성태영 팀원 추가 -->
+				<div class="item">
+					<div class="img">
+						<div class="rank rank2">팀원</div>
+					</div>
+					<div class="textWrap">
+						<p class="name">
+							<span class="sub_title">이름</span> 성태영
+							<button onclick="likeStar()">✅</button>
+						</p>
+						<p class="txt">안녕하세요? 저는 프론트엔드 개발자를 준비중인 성태영 이라고 합니다. 저는 강아지를 너무 좋아하고 누워있기를 좋아합니다!!</p>
+					</div>
+					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
+				</div>
+				<!--				성태영 팀원추가-->
+				
+				<div class="item">
+					<div class="img">
+						<div class="rank rank2">팀원</div>
+					</div>
+					
+					<div class="textWrap">
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+					</div>
+					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
+				</div>
+			</div>
+			<div class="team">
+				<div class="item">
+					<div class="img">
+						<div class="rank rank2">팀원</div>
+					</div>
+					<div class="textWrap">
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+					</div>
+					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
+				</div>
+				<div class="item">
+					<div class="img">
+						<div class="rank rank2">팀원</div>
+					</div>
+					<div class="textWrap">
+						<p class="name"><span class="sub_title">이름</span>최지원</p>
+						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+					</div>
+					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="modalLayer"></section>
+	<div class="modalWrap modal1">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+			</div>
+			<div class="desc">
+				<p><span>이름</span>배민수</p>
+				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+				<p><span>취미</span>ㅇㅇ</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>d앞으로 잘부탁드렵용</p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	
+	<!--	성태영 수정한 부분입니다-->
+	<div class="modalWrap modal2">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="../MINIproject/사진/ty_img.jpg" alt="강아지">
+			</div>
+			<div class="desc">
+				<p><span>이름</span> 성태영</p>
+				<p><span>MBTI</span> ISFP, ISFJ</p>
+				<p><span>취미</span> 추리드라마 보기, 강아지 산책</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">협업을 좋아합니다. 하루에 계획해서 일하기를 좋아하고 그이상의 일은....쉬고싶어요...^^... 칼퇴를 아주 좋아합니다..!</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 누워서 추리드라마 시청을 좋아합니다. 강아지들과 산책하기를 즐겨해요</p>
+			<p>여행을 좋아하는데 계획 없는 여행도 좋아합니다</p>
+			<p>하지만 일을 계획해서 하기를 좋아해요</p>
+			<p>저와 친해지시면 강아지사진 많이 보실수 있으세요~ </p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" href="https://velog.io/@young0_0" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	<!--	성태영 수정-->
+	
+	<div class="modalWrap modal3">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+			</div>
+			<div class="desc">
+				<p><span>이름</span>최지원</p>
+				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+				<p><span>취미</span>ㅇㅇ</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>d앞으로 잘부탁드렵용</p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	<div class="modalWrap modal4">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+			</div>
+			<div class="desc">
+				<p><span>이름</span>김도훈</p>
+				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+				<p><span>취미</span>ㅇㅇ</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>d앞으로 잘부탁드렵용</p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	<div class="modalWrap modal5">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+			</div>
+			<div class="desc">
+				<p><span>이름</span>송지현</p>
+				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+				<p><span>취미</span>ㅇㅇ</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>d앞으로 잘부탁드렵용</p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	<section class="comment">
+		<div class="container">
+			<h2 class="maintitle">우리팀을 응원해주세요!</h2>
+			<div class="inputBox">
+				<input type="text" placeholder="우리팀을 응원해주세요">
+				<button class="cmBtn btn">댓글등록</button>
+			</div>
+			<div class="boardWrap">
+				<div class="board">
+					<p>완벽해염~</p><span>성태영</span>
+				</div>
+				<div class="board">
+					<p>완벽해염~</p><span>성태영</span>
+				</div>
+				<div class="board">
+					<p>완벽해염~</p><span>성태영</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<script>
+	function openModal(modalname) {
+		document.get
+		$('.modalLayer').fadeIn(300)
+		$("." + modalname).fadeIn(300);
+	}
+	
+	function cancel() {
+		$('.modalLayer').fadeOut(300)
+		$(".modalWrap").fadeOut(300);
+	}
+	
+	function show_like() {
+		
+		$.ajax({
+			type: "GET",
+			url: "/like",
+			data: {},
+			success: function (response) {
+					alert(response['msg']);
+			}
+		});
+	}
+	
+	
+	function likeStar(name) {
+		$.ajax({
+			type: 'POST',
+			url: '/like',
+			data: {name_give: name},
+			success: function (response) {
+				alert(response['msg']);
+				window.location.reload()
+			}
+		});
+	}
+
+</script>
+</body>
+</html>
