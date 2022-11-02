@@ -328,6 +328,8 @@
     justify-content: center;
     align-items: center;
 }
+
+/* 송지현 입력 및 수정
 .commenterName {
     padding-top: 5px;
 }
@@ -346,3 +348,7 @@
     background-color: darkblue;
     border-radius: 5px;
 }
+
+.hidden {
+    display: none;
+} */

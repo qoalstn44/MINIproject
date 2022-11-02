@@ -73,7 +73,7 @@
 					<div class="img">
 						<div class="rank rank2">팀원</div>
 					</div>
-					
+
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
@@ -236,8 +236,8 @@
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-	
 
+<!-- 송지현 입력 및 수정
      <section class="comment">
         <div class="container">
           <h2 class="maintitle">우리 팀을 응원해주세요!</h2>
@@ -257,6 +257,7 @@
           </div>
         </div>
       </section>
+      -->
 </div>
 
 <script>
@@ -270,10 +271,11 @@
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
-
+/* 송지현 입력 및 수정
 	$(document).ready(() => {
 		show_comment();
 	})
+	window.onload(showList)
 
 	function save_comment() {
 		let comment = $('#addCommentIpt').val();
@@ -281,11 +283,11 @@
 		let password = $('#commentPw').val();
 		let date = new Date();
 		let year = date.getFullYear();
-		let month = date.getMonth() + 1;
-		let day = date.getDate();
-		let hour = date.getHours();
-		let minute = date.getMinutes();
-		let second = date.getSeconds()
+		let month = String(date.getMonth() + 1).padStart(2, '0');
+		let day = String(date.getDate()).padStart(2, '0');
+		let hour = String(date.getHours()).padStart(2, '0');
+		let minute = String(date.getMinutes()).padStart(2, '0');
+		let second = String(date.getSeconds()).padStart(2, '0');
 
 		let commentTime = `${year}/${month}/${day} ${hour}:${minute}:${second}`
 		if(comment !== "" && nickname !== "" && password !== "") {
@@ -319,15 +321,18 @@
 					let comment = rows[i]['comment'];
 					let nickname = rows[i]['nickname'];
 					let time = rows[i]['time']
-
 					temp_html = `<div class="board">
               						<div class="boardInfo">
 										<div class="boardComment">${comment}</div>
 										<div class="commenterName">${nickname}</div>
 										<div class="commentBtns">
 											<span class="commentDate">${time}</span>
-											<input type="button" value="수정" />
-											<input type="button" value="삭제" />
+											<input type="button" class="edit_comment" value="수정" />
+											<input type="button" class="delete_comment" value="삭제" />
+											<div class="commentSettingBtn">
+												<input type="text" class="hidden comfirmPw" placeholder="비밀번호를 입력해주세요">
+												<input type="text" class="hidden newPw" placeholder="비밀번호를 입력해주세요">
+											</div>
 										</div>
 									</div>
 									<div class="commentBtn">
@@ -340,6 +345,7 @@
 			}
 		})
 	}
+*/
 </script>
 </body>
 </html>
