@@ -144,7 +144,8 @@
 }
 .textWrap{
     padding:24px  ;
-    position: relative;
+    /* <!-- 김도훈 좋아요 추가 2022 11 02 16:00 --> */
+    position: relative;  
 }
 .name{
     margin-top: 16px;
@@ -331,7 +332,7 @@
     align-items: center;
 }
 
-
+/* <!-- 김도훈 좋아요 추가 2022 11 02 16:00 --> */
 .like_btn{
     margin: 0;
     padding: 0;
@@ -345,6 +346,7 @@
     color: gray;
 }
 
+/* <!-- 김도훈 좋아요 추가 2022 11 02 16:00 --> */
 .like_btn i:hover{
     cursor: pointer;
 
