@@ -144,6 +144,7 @@
 }
 .textWrap{
     padding:24px  ;
+    position: relative; /*김도훈 좋아요 추가 2022 11 02 16:00*/
 }
 .name{
     margin-top: 16px;
