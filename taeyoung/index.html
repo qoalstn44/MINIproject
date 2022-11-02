@@ -8,12 +8,10 @@
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
-	<!--/*최지원님 작성*/-->
-	<link rel="stylesheet" href="./static/sub.css">
-	<!--/*최지원님 작성*/-->
+	<link rel="stylesheet" href="./static/sub.css"><!--/*최지원님 작성*/-->
 	<script src="https://kit.fontawesome.com/9e8b7f079e.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	<script src=“https://kit.fontawesome.com/3e498796cb.js” crossorigin=“anonymous”></script>
 	<style type="text/css">
 		/* visited - 한번 클릭하거나 전에 클릭한적 있을 경우 #c71d44 설정 */
 		a:visited { color: #c71d44; text-decoration: none;}	
@@ -110,6 +108,9 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>배민수</p>
+						
+						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button>
+						
 						<p class="txt">안녕하세요! 1조 팀장을 맡고있는 배민수 입니다!</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
@@ -322,6 +323,70 @@
 </div>
 
 <script>
+//김도훈님
+
+
+var btnvar1 = document.getElementById('btnh1')
+	
+	function Toggle1(){
+		 
+		if(btnvar1.style.color == "red"){
+			btnvar1.style.color ="grey"
+		 
+			
+		}else{
+			btnvar1.style.color="red"
+			localStorage.setItem("like1", true)  
+		}
+		
+	} 
+
+	var btnvar2 = document.getElementById('btnh2')
+	
+	function Toggle2(){
+		if(btnvar2.style.color == "red"){
+			btnvar2.style.color ="grey"
+		}else{
+			btnvar2.style.color="red"
+		}
+		
+	} 
+
+	var btnvar3 = document.getElementById('btnh3')
+	
+	function Toggle3(){
+		if(btnvar3.style.color == "red"){
+			btnvar3.style.color ="grey"
+		}else{
+			btnvar3.style.color="red"
+		}
+		
+	} 
+
+	var btnvar4 = document.getElementById('btnh4')
+	
+	function Toggle4(){
+		if(btnvar4.style.color == "red"){
+			btnvar4.style.color ="grey"
+		}else{
+			btnvar4.style.color="red"
+		}
+		
+	} 
+
+	var btnvar5 = document.getElementById('btnh5')
+	
+	function Toggle5(){
+		if(btnvar5.style.color == "red"){
+			btnvar5.style.color ="grey"
+		}else{
+			btnvar5.style.color="red"
+		}
+		
+	} 
+</script>
+
+<script>
 	function openModal(modalname) {
 		document.get
 		$('.modalLayer').fadeIn(300)
@@ -333,5 +398,7 @@
 		$(".modalWrap").fadeOut(300);
 	}
 </script>
+
+
 </body>
 </html>
