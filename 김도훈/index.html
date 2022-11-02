@@ -288,84 +288,115 @@
 </div>
 
 <script>
-	//<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
+
+
+
+	//<!-- 김도훈 좋아요 추가 2022 11 03 01:00 -->
+
+	// 좋아요 버튼 1
 	var btnvar1 = document.getElementById('btnh1')
 	const status1 = localStorage.getItem('like1')
-	if (status1 === true) {
+
+	if (status1 === 'true') {
 		btnvar1.style.color = "red"
 	} else {
 		btnvar1.style.color = "grey"
 	}
-
-
 	function Toggle1() {
 
 		const status1 = localStorage.getItem('like1')
-		//  로컬스트로지 값을 가져와서 클릭을하면 반대부호를 넣는것 
-		localStorage.setItem('like1', !status1)
-
-		// 이 데이터가 true 일때 색상을 바꿔라
-
-		if (status1 === true) {
+		if (status1 === 'true') {
+			localStorage.setItem('like1', 'false')
 			btnvar1.style.color = "grey"
 		} else {
+			localStorage.setItem('like1', 'true')
 			btnvar1.style.color = "red"
 		}
-
-
-
-		// if(btnvar1.style.color == "red"){
-		// 	btnvar1.style.color ="grey"
-		// }else{
-		// 	btnvar1.style.color="red"
-		// 	localStorage.setItem("like1", true)  
-		// }
-
 	}
-
+	// 좋아요 버튼 2 
 	var btnvar2 = document.getElementById('btnh2')
+	const status2 = localStorage.getItem('like2')
 
+	if (status2 === 'true') {
+		btnvar2.style.color = "red"
+	} else {
+		btnvar2.style.color = "grey"
+	}
 	function Toggle2() {
-		if (btnvar2.style.color == "red") {
+
+		const status2 = localStorage.getItem('like2')
+		if (status2 === 'true') {
+			localStorage.setItem('like2', 'false')
 			btnvar2.style.color = "grey"
 		} else {
+			localStorage.setItem('like2', 'true')
 			btnvar2.style.color = "red"
 		}
-
 	}
 
-	var btnvar3 = document.getElementById('btnh3')
 
+	//좋아요 버튼3
+	var btnvar3 = document.getElementById('btnh3')
+	const status3 = localStorage.getItem('like3')
+
+	if (status3 === 'true') {
+		btnvar3.style.color = "red"
+	} else {
+		btnvar3.style.color = "grey"
+	}
 	function Toggle3() {
-		if (btnvar3.style.color == "red") {
+
+		const status3 = localStorage.getItem('like3')
+		if (status3 === 'true') {
+			localStorage.setItem('like3', 'false')
 			btnvar3.style.color = "grey"
 		} else {
+			localStorage.setItem('like3', 'true')
 			btnvar3.style.color = "red"
 		}
-
 	}
 
-	var btnvar4 = document.getElementById('btnh4')
 
+	// 좋아요 버튼 4
+	var btnvar4 = document.getElementById('btnh4')
+	const status4 = localStorage.getItem('like4')
+
+	if (status4 === 'true') {
+		btnvar4.style.color = "red"
+	} else {
+		btnvar4.style.color = "grey"
+	}
 	function Toggle4() {
-		if (btnvar4.style.color == "red") {
+
+		const status4 = localStorage.getItem('like4')
+		if (status4 === 'true') {
+			localStorage.setItem('like4', 'false')
 			btnvar4.style.color = "grey"
 		} else {
+			localStorage.setItem('like4', 'true')
 			btnvar4.style.color = "red"
 		}
-
 	}
-
+	// 좋아요 버튼 5
 	var btnvar5 = document.getElementById('btnh5')
+	const status5 = localStorage.getItem('like5')
 
+	if (status5 === 'true') {
+		btnvar5.style.color = "red"
+	} else {
+		btnvar5.style.color = "grey"
+	}
 	function Toggle5() {
-		if (btnvar5.style.color == "red") {
+
+		const status5 = localStorage.getItem('like5')
+		if (status5 === 'true') {
+			localStorage.setItem('like5', 'false')
 			btnvar5.style.color = "grey"
 		} else {
+			localStorage.setItem('like5', 'true')
 			btnvar5.style.color = "red"
 		}
-
-	} 
+	}
 </script>
 
 
