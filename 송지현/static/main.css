@@ -329,7 +329,7 @@
     align-items: center;
 }
 
-/* 송지현 입력 및 수정
+
 .commenterName {
     padding-top: 5px;
 }
@@ -338,17 +338,13 @@
     color: darkgray;
 }
 
-.commentBtns > input{
+.boardInfo > button{
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.commentBtns > input:hover {
+.boardInfo > button:hover {
     color: white;
     background-color: darkblue;
     border-radius: 5px;
 }
-
-.hidden {
-    display: none;
-} */
