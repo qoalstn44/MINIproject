@@ -9,8 +9,11 @@
 	<link rel="stylesheet" href="../static/reset.css">
 	<link rel="stylesheet" href="../static/main.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	{#fontawesome#}
+	<script src="https://kit.fontawesome.com/3e498796cb.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
 
 <div class="wrap">
 	<section class="header">
@@ -60,53 +63,45 @@
 			</div>
 
 			<div class="team" id="team">
-				<div class="item">
-					<div class="img">
-						<div class="rank">팀장</div>
-					</div>
-					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
-					</div>
-					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
-				</div>
 			</div>
 		</div>
 
 	</section>
 	<section class="modalLayer"></section>
 	<div class="modalWrap modal1">
-		<div class="modalCon">
-			<div class="modalimg"><img
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://ca.slack-edge.com/T043597JK8V-U0464V4DQKY-0a92e92ba44b-512" alt="배민수">
+				</div>
+				<div class="desc">
+					<p><span>이름</span> 배민수</p>
+					<p><span>MBTI</span> ENFP</p>
+					<p><span>취미</span> 배드민턴🏸</p>
+					<p><span><i class="fa-brands fa-square-instagram"> ,</i><i class="fa-solid fa-v"></i></span><a href="https://www.instagram.com/__bae_min__/" target="_blank">bae_min</a>&#128274; <a href="https://velog.io/@qoalstn44" target="_blank">velog.io</a></p>
+					<p>
+						<span>프로젝트 맡은 역활</span>
+
+					<p class="block">지금 보이시는 웹페이지를 꾸미고 작성했습니다!</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span>배민수</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@qoalstn44" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
 
 	<!--	성태영 수정한 부분입니다-->
 	<div class="modalWrap modal2">
 		<div class="modalCon">
 			<div class="modalimg"><img
-				src="../MINIproject/사진/ty_img.jpg" alt="강아지">
+				src="https://ca.slack-edge.com/T043597JK8V-U045ZFR4ZRQ-0ba42aa09caa-512" alt="성태영">
 			</div>
 			<div class="desc">
 				<p><span>이름</span> 성태영</p>
@@ -135,33 +130,7 @@
 	<div class="modalWrap modal3">
 		<div class="modalCon">
 			<div class="modalimg"><img
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
-			</div>
-			<div class="desc">
-				<p><span>이름</span>최지원</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
-			</div>
-		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
-	<div class="modalWrap modal4">
-		<div class="modalCon">
-			<div class="modalimg"><img
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				src="https://ca.slack-edge.com/T043597JK8V-U0445EEUZ44-c3a783a7afe2-512" alt="김도훈">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>김도훈</p>
@@ -180,14 +149,41 @@
 			<p>d앞으로 잘부탁드렵용</p>
 		</div>
 		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<a class="blogbtn" href="https://velog.io/@syncstar" target="_blank">개인블로그 가기</a>
+			<span class="cancel" onclick="cancel()">닫기</span>
+		</div>
+	</div>
+	<div class="modalWrap modal4">
+		<div class="modalCon">
+			<div class="modalimg"><img
+				src="https://ca.slack-edge.com/T043597JK8V-U044XUBEG01-58b10b88768d-512" alt="최지원">
+			</div>
+			<div class="desc">
+				<p><span>이름</span>최지원</p>
+				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+				<p><span>취미</span>ㅇㅇ</p>
+				<p>
+					<span>일 스타일</span>
+				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				</p>
+			</div>
+		</div>
+		<div class="selfIntro">
+			<h3>자기소개</h3>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+			<p>d앞으로 잘부탁드렵용</p>
+		</div>
+		<div class="modalbottom">
+			<a class="blogbtn" href="https://velog.io/@jiwonchoii
+" target="_blank">개인블로그 가기</a>
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
 	<div class="modalWrap modal5">
 		<div class="modalCon">
 			<div class="modalimg"><img
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				src="https://image.edaily.co.kr/images/photo/files/NP/S/2018/06/PS180605011…" alt="송지현">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>송지현</p>
@@ -206,7 +202,7 @@
 			<p>d앞으로 잘부탁드렵용</p>
 		</div>
 		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<a class="blogbtn" href="#" target="_blank">개인블로그 가기</a>
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
@@ -255,13 +251,13 @@
 
     function save_teams() {
         let teamName = $('#teamName').val()
-		    let teamIntro = $('#teamIntro').val()
-		    let teamPhoto = $('#teamPhoto').val()
+        let teamIntro = $('#teamIntro').val()
+        let teamPhoto = $('#teamPhoto').val()
 
         $.ajax({
             type: "POST",
             url: "/team",
-            data: {teams_give: teamName, intro_give:teamIntro ,photo_give:teamPhoto},
+            data: {teams_give: teamName, intro_give: teamIntro, photo_give: teamPhoto},
             success: function (response) {
                 alert(response["msg"])
                 window.location.reload()
@@ -280,42 +276,90 @@
                 let rows = response['teams']
                 for (let i = 0; i < rows.length; i++) {
                     let name = rows[i]['teams']
-		                let intro = rows[i]['intro']
+                    let intro = rows[i]['intro']
                     let like = rows[i]['like']
                     let num = rows[i]['num']
-		                let photo = rows[i]['photo']
+                    let photo = rows[i]['photo']
 
                     let temp_html = ``
-										if(num === 0){
-                     temp_html = `<div class="item">
+                    if (num === 1 && like === 0) {
+                        temp_html = `<div class="item">
 													<div class="img" style="background-image: url('${photo}')">
 														<div class="rank">팀장</div>
 													</div>
 													<div class="textWrap">
 														<div class="name">
-															<span class="sub_title">이름</span>${name}
-															<button class="like" onclick=likeStar(${num})>heart</button><span>${like}</span>
+															<div>
+																<span class="sub_title">이름</span>${name}
+															</div>
+															<div>
+																<a class="like" onclick=likeStar(${num})><span class="heart heart_one"><i class="fas fa-heart"></i></span></a>
+																<span>${like}</span>
+															</div>
 														</div>
 														<p class="txt">${intro}</p>
 													</div>
 													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
 												</div>`
-		                }else{
-                       temp_html =  `<div class="item">
+                    } else if (num === 1 && like > 1) {
+                        temp_html = `<div class="item">
+													<div class="img" style="background-image: url('${photo}')">
+														<div class="rank">팀장</div>
+													</div>
+													<div class="textWrap">
+														<div class="name">
+															<p>
+																<span class="sub_title">이름</span>${name}
+															</p>
+															<div>
+																<a class="like" onclick=likeStar(${num})><span class="heart "><i class="fas fa-heart"></i></span></a>
+																<span>${like}</span>
+															</div>
+														</div>
+														<p class="txt">${intro}</p>
+													</div>
+													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
+												</div>`
+                    } else if (like >= 1) {
+                        temp_html = `<div class="item">
 													<div class="img" style="background-image: url('${photo}')">
 														<div class="rank rank2">팀원</div>
 													</div>
 													<div class="textWrap">
 														<div class="name">
-															<span class="sub_title">이름</span>${name}
-															<button class="like" onclick=likeStar(${num})>heart</button>
-															<span>${like}</span>
+															<p>
+																<span class="sub_title">이름</span>${name}
+															</p>
+															<div>
+																<a class="like" onclick=likeStar(${num})><span class="heart "><i class="fas fa-heart"></i></span></a>
+																<span>${like}</span>
+															</div>
 														</div>
 														<p class="txt">${intro}</p>
 													</div>
 													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
 												</div>`
-										}
+                    } else {
+                        temp_html = `<div class="item">
+													<div class="img" style="background-image: url('${photo}')">
+														<div class="rank rank2">팀원</div>
+													</div>
+													<div class="textWrap">
+														<div class="name">
+															<p>
+																<span class="sub_title">이름</span>${name}
+															</p>
+
+															<div>
+																<a class="like" onclick=likeStar(${num})><span class="heart heart_one"><i class="fas fa-heart"></i></span></a>
+																<span>${like}</span>
+															</div>
+														</div>
+														<p class="txt">${intro}</p>
+													</div>
+													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
+												</div>`
+                    }
                     $('#team').append(temp_html)
                 }
             }

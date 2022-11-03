@@ -38,7 +38,7 @@ def like_post():
     current_like = target_star['like']
     new_like = current_like + 1
     db.oneBillion.update_one({'num': int(num_receive)}, {'$set': {'like': new_like}})
-    return jsonify({'msg': 'like 연결되었습니다!'})
+    return jsonify({'msg': '좋아요 +1'})
 
 # 추가된 팀원 get
 @app.route("/team", methods=["GET"])
