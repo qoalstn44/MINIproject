@@ -52,5 +52,5 @@ def comment_get():
 #     db.onebillion.remove({'_id': id})
 #     return jsonify({'msg': '방명록을 삭제했습니다!'})
 
-# if __name__ == '__main__':
-#    app.run('0.0.0.0', port=5000, debug=True)
+if __name__ == '__main__':
+    app.run('0.0.0.0', port=5000, debug=True)
