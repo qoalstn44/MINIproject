@@ -381,6 +381,16 @@
     }
 }
 
+@keyframes super2 {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
 .like_btn {
     margin: 0;
     padding: 0;
@@ -405,9 +415,34 @@
 
 .like_btn i:active {
     font-size: 30px;
-    
+    animation: super2 1s ease-in-out;
 }
+
+ 
 
 /* hover했을 떄 이미지 */
 
- 
+@keyframes gear {
+    0%{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(540deg);
+    }
+    100%{
+        transform: rotateZ(0);
+       
+    }
+}
+
+.fa-gear {
+    color: darkblue; 
+    text-decoration: none;  
+    animation: gear 4s ease-in-out infinite;
+
+}
+
+.fa-gear:hover{ 
+    color: tomato; 
+    animation: gear 2s ease-in-out infinite;
+}
