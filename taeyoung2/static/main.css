@@ -5,8 +5,9 @@
     font-weight: normal;
     font-style: normal;
 }
-*{
-    line-height: 1.5;
+/*1103 성태영 추가*/
+p, div{
+    line-height: 1.3;
 }
 
 .header{
