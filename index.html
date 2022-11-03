@@ -1,23 +1,65 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>oneBillon</title>
 	<link rel="stylesheet" href="./static/reset.css">
 	<link rel="stylesheet" href="./static/main.css">
+	<link rel="stylesheet" href="./static/sub.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-	<script src="https://kit.fontawesome.com/3e498796cb.js" crossorigin="anonymous"></script>
-
-</head>
 
 
+<!-- 최지원 작성 -->
+
+<script>
+	function darkMode() {
+		let body = document.body;
+		body.classList.toggle("dark-mode");
+		
+	}
+</script>
 
 
+<script>
+				$(document).ready(function () {
+					$.ajax({
+						type: "GET",
+						url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+						data: {},
+						success: function (response) {
+							$('#temp').text(response['temp'])
+							document.getElementById('icon').src = response['icon']
+							$('#city').text(response['city'])
+							$('#clouds').text(response['clouds'])
+						}
+					})
+				});
+</script>
+
+	</head>
+
+
+<body>
+
+
+<div class="navbar">
+	<nav class="gnb-menu">
+		<p style="margin-bottom: 30px;">
+			<span id="city"></span> 
+			<img id="icon" src="">
+			<span></span> 
+			<span id="icon"></span> 
+			<span id="clouds"></span> 
+			<span id="temp"></span>℃
+		</p>	
+		<button class="darkbtn" onclick="darkMode()">Dark Mode</button>
+	</nav>
+</div>
+
+<!-- 여기까지 -->
 
 <div class="wrap">
 	<section class="header">
@@ -26,9 +68,8 @@
 	</section>
 	<section class="intro">
 		<div class="container">
-			<h2 class="maintitle"><i class="fa-solid fa-gear"></i>팀소개</h2>
+			<h2 class="maintitle">팀소개</h2>
 			<p class="txt">저희는 A반 1조 onebillion 입니다.엄청나게 일찍발표하게 되어 정말이지부담스럽님만 이나ㅓㄹ이나러ㅣ나러니ㅏ러니ㅏㄹ어니아러니아러니ㅏㅇ러니아러닐어</p>
-
 			<div class="introWrap">
 				<div class="boxes">
 					<div class="box">
@@ -63,12 +104,7 @@
 						<div class="rank">팀장</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button>
-
-
+						<p class="name"><span class="sub_title">이름</span>배민수</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
@@ -78,9 +114,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle2()" id="btnh2" class="like_btn"><i class="fas fa-heart"></i></button>
+						<p class="name"><span class="sub_title">이름</span>성태영</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
@@ -89,11 +123,9 @@
 					<div class="img">
 						<div class="rank rank2">팀원</div>
 					</div>
-
+					
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle3()" id="btnh3" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
@@ -105,9 +137,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle4()" id="btnh4" class="like_btn"><i class="fas fa-heart"></i></button>
+						<p class="name"><span class="sub_title">이름</span>김도훈</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
@@ -117,9 +147,7 @@
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle5()" id="btnh5" class="like_btn"><i class="fas fa-heart"></i></button>
+						<p class="name"><span class="sub_title">이름</span>송지현</p>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
@@ -129,141 +157,136 @@
 	</section>
 	<section class="modalLayer"></section>
 	<div class="modalWrap modal1">
-		<div class="modalCon">
-			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span>배민수</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span>배민수</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@qoalstn44" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
 	<div class="modalWrap modal2">
-		<div class="modalCon">
-			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span> 성태영</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span> 성태영</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@young0_0" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
 	<div class="modalWrap modal3">
-		<div class="modalCon">
-			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span>최지원</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span>최지원</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@jiwonchoii" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
 	<div class="modalWrap modal4">
-		<div class="modalCon">
-			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span>김도훈</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span>김도훈</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@syncstar" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
 	<div class="modalWrap modal5">
-		<div class="modalCon">
-			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+			<div class="modalCon">
+				<div class="modalimg"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
+				</div>
+				<div class="desc">
+					<p><span>이름</span>송지현</p>
+					<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
+					<p><span>취미</span>ㅇㅇ</p>
+					<p>
+						<span>일 스타일</span>
+					<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+					</p>
+				</div>
 			</div>
-			<div class="desc">
-				<p><span>이름</span>송지현</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
-				<p>
-					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
-				</p>
+			<div class="selfIntro">
+				<h3>자기소개</h3>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
+				<p>d앞으로 잘부탁드렵용</p>
+			</div>
+			<div class="modalbottom">
+				<a class="blogbtn" href="https://velog.io/@songjihyun_dev" target="_blank">개인블로그 가기</a>
+				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-		<div class="selfIntro">
-			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용ㅇㅇ~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
-		</div>
-		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
-			<span class="cancel" onclick="cancel()">닫기</span>
-		</div>
-	</div>
-
+	
 
 	<section class="comment">
 		<div class="container">
@@ -288,162 +311,16 @@
 </div>
 
 <script>
-
-
-
-	//<!-- 김도훈 좋아요 추가 2022 11 03 01:00 -->
-
-	// 좋아요 버튼 1
-
-	var btnvar1 = document.getElementById('btnh1')
-
-	// 스토리지 값 불러오기, 하지만 setItem으로 like1에 값을 부여하지 않았으니, status1이라는 변수에는 null이라는 값이 할당됨
-	const status1 = localStorage.getItem('like1')
-
-	//  새로고침 및 초기 화면 표시임
-	// 여기서 statsu1의 값이 'true'일 때 레드로 바꿔주고, 'true'가 아닐 때 전부 grey로 바꿔달라는 요청, 
-	// status1의 값이 null이니 당연히 처음에는 grey로 변하게 될 거임
-	if (status1 === 'true') {
-		btnvar1.style.color = "red"
-	} else {
-		btnvar1.style.color = "grey"
-	}
-
-	// 하트 버튼을 클릭 했을 때
-	function Toggle1() {
-
-		// 버튼을 클릭하면, 현재 status1의 값을 불러온다.
-		const status1 = localStorage.getItem('like1')
-		// 만약 status1의 값이 트루라면, like1의 값을 'false'로 바꿔주고 색상도 grey로 바꿔준다.
-		if (status1 === 'true') {
-			localStorage.setItem('like1', 'false')
-			btnvar1.style.color = "grey"
-			// status1의 값이 'true'가 아니라면, like1의 값을 'true'로 바꿔주고, 색상도 레드로 바꿔준다.
-		} else {
-			// 여기서 setItem을 통해서 like1의 값을 true로 임명함, 그래서 색상이 레드로 바뀌는거임
-			localStorage.setItem('like1', 'true')
-			btnvar1.style.color = "red"
-		}
-	}
-
-// 서버에 정보 저장, 좋아요 만들 시 화면이 푸쉬 될때 마다 좋아요 정보를 불러와서 화면에 표시됨 / 좋아요 기능이 있는 웹사이트 가서 개발자 도구 확인
-// 토글 이라는 펑션을 만들었으면, 새로고침 할 때마다 이 코드가 위에서 아래로 익혀짐, 
-// 반복문 - 서버에서 JSON 데이터로 객체 형태로 뱉어주면, 그 데이터에 따라서 하는거지 지금은 해야는게 아님 하나의 함수로 하고 매게변수를 다르게 받아서 처리를 다르게 하면 됨 
-//  펑션 토글원 () 안에 매게변수를만들고, 그 매게변수를 like1에 만들고 나중에 setitem 할 떄도 그 키로 해가지고 연동이 될 거다. 
-//  리팩토링 - 코드정리, 불 필요한 반복이 되었을 때 코드를 줄이고 할지 
-
-
-
-
-
-
-
-
-/* <!-- 김도훈 좋아요 추가 2022 11 02  --> */
-	// 좋아요 버튼 2 
-	var btnvar2 = document.getElementById('btnh2')
-	const status2 = localStorage.getItem('like2')
-
-	if (status2 === 'true') {
-		btnvar2.style.color = "red"
-	} else {
-		btnvar2.style.color = "grey"
-	}
-	function Toggle2() {
-
-		const status2 = localStorage.getItem('like2')
-		if (status2 === 'true') {
-			localStorage.setItem('like2', 'false')
-			btnvar2.style.color = "grey"
-		} else {
-			localStorage.setItem('like2', 'true')
-			btnvar2.style.color = "red"
-		}
-	}
-
-
-	//좋아요 버튼3
-	var btnvar3 = document.getElementById('btnh3')
-	const status3 = localStorage.getItem('like3')
-
-	if (status3 === 'true') {
-		btnvar3.style.color = "red"
-	} else {
-		btnvar3.style.color = "grey"
-	}
-	function Toggle3() {
-
-		const status3 = localStorage.getItem('like3')
-		if (status3 === 'true') {
-			localStorage.setItem('like3', 'false')
-			btnvar3.style.color = "grey"
-		} else {
-			localStorage.setItem('like3', 'true')
-			btnvar3.style.color = "red"
-		}
-	}
-
-
-	// 좋아요 버튼 4
-	var btnvar4 = document.getElementById('btnh4')
-	const status4 = localStorage.getItem('like4')
-
-	if (status4 === 'true') {
-		btnvar4.style.color = "red"
-	} else {
-		btnvar4.style.color = "grey"
-	}
-	function Toggle4() {
-
-		const status4 = localStorage.getItem('like4')
-		if (status4 === 'true') {
-			localStorage.setItem('like4', 'false')
-			btnvar4.style.color = "grey"
-		} else {
-			localStorage.setItem('like4', 'true')
-			btnvar4.style.color = "red"
-		}
-	}
-	// 좋아요 버튼 5
-	var btnvar5 = document.getElementById('btnh5')
-	const status5 = localStorage.getItem('like5')
-
-	if (status5 === 'true') {
-		btnvar5.style.color = "red"
-	} else {
-		btnvar5.style.color = "grey"
-	}
-	function Toggle5() {
-
-		const status5 = localStorage.getItem('like5')
-		if (status5 === 'true') {
-			localStorage.setItem('like5', 'false')
-			btnvar5.style.color = "grey"
-		} else {
-			localStorage.setItem('like5', 'true')
-			btnvar5.style.color = "red"
-		}
-	}
-</script>
-<!-- /* 김도훈 좋아요 추가 2022 11 02  */ -->
-
-<script>
 	function openModal(modalname) {
 		document.get
 		$('.modalLayer').fadeIn(300)
 		$("." + modalname).fadeIn(300);
-	}
+  }
 
 	function cancel() {
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
-
 </script>
-
-
-
-
 </body>
-
 </html>
