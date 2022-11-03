@@ -236,8 +236,7 @@
 				<span class="cancel" onclick="cancel()">닫기</span>
 			</div>
 		</div>
-
-<!-- 송지현 입력 및 수정
+<!-- 송지현 수정
      <section class="comment">
         <div class="container">
           <h2 class="maintitle">우리 팀을 응원해주세요!</h2>
@@ -253,14 +252,19 @@
 			  id="addCommentIpt"
             /><button onclick="save_comment()" class="cmBtn btn">댓글 등록</button>
           </div>
-          <div class="boardWrap">
-          </div>
+          <ul class="boardWrap">
+          </ul>
+			<input type="button" class="moreComment btn" value="더보기">
         </div>
       </section>
       -->
 </div>
 
 <script>
+	$(document).ready(() => {
+		show_comment();
+	})
+
 	function openModal(modalname) {
 		document.get
 		$('.modalLayer').fadeIn(300)
@@ -271,16 +275,12 @@
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
-/* 송지현 입력 및 수정
-	$(document).ready(() => {
-		show_comment();
-	})
-	window.onload(showList)
 
 	function save_comment() {
 		let comment = $('#addCommentIpt').val();
 		let nickname = $('#commentName').val();
 		let password = $('#commentPw').val();
+
 		let date = new Date();
 		let year = date.getFullYear();
 		let month = String(date.getMonth() + 1).padStart(2, '0');
@@ -309,43 +309,167 @@
 			alert('빈 칸이 존재합니다!')
 		}
 	}
+// 송지현 수정
+// 	function show_comment() {
+// 		$.ajax({
+// 			type: "GET",
+// 			url: '/onebillion',
+// 			data: {},
+// 			success: function(res) {
+// 				let rows = res['comments'].reverse();
+// 				console.log(rows)
+// 				let maxComment = 5; // 5개씩 보여주기
+//
+// 				for(let i = 0; i < maxComment; i++) { // 초기 데이터
+// 					let comment = rows[i]['comment'];
+// 					let nickname = rows[i]['nickname'];
+// 					let time = rows[i]['time']
+//
+// 					let temp_html = `<li class="board">
+//               							<div class="boardInfo">
+// 											<div class="boardComment">${comment}</div>
+// 											<div class="commenterName">${nickname}</div>
+// 											<span class="commentDate">${time}</span>
+// 										</div>
+// 									</li>`
+//
+// 						$('.boardWrap').append(temp_html)
+// 				}
+//
+// 				let cnt = 1;
+// 				let cmtLoadBtn = document.querySelector('.moreComment')
+//
+// 				cmtLoadBtn.addEventListener('click', ()=>{
+// 					cnt++
+// 					if(rows.length / maxComment < cnt) {
+// 						cmtLoadBtn.style.display = "none";
+// 					}
+//
+// 					for (let i = maxComment * (cnt - 1); i < maxComment * cnt; i++) {
+// 						if(rows[i] !== undefined) {
+// 						let comment = rows[i]['comment'];
+// 						let nickname = rows[i]['nickname'];
+// 						let time = rows[i]['time']
+//
+// 						let temp_html = `<li class="board">
+// 											<div class="boardInfo">
+// 												<div class="boardComment">${comment}</div>
+// 												<div class="commenterName">${nickname}</div>
+// 												<span class="commentDate">${time}</span>
+// 											</div>
+// 										</li>`
+//
+// 							$('.boardWrap').append(temp_html)
+// 						}
+// 					}
+// 				})
+// 			}
+// 		})
+// 	}
 
-	function show_comment() {
-		$.ajax({
-			type: "GET",
-			url: '/onebillion',
-			data: {},
-			success: function(res) {
-				let rows = res['comments'];
-				for(let i = 0; i < rows.length; i++) {
-					let comment = rows[i]['comment'];
-					let nickname = rows[i]['nickname'];
-					let time = rows[i]['time']
-					temp_html = `<div class="board">
-              						<div class="boardInfo">
-										<div class="boardComment">${comment}</div>
-										<div class="commenterName">${nickname}</div>
-										<div class="commentBtns">
-											<span class="commentDate">${time}</span>
-											<input type="button" class="edit_comment" value="수정" />
-											<input type="button" class="delete_comment" value="삭제" />
-											<div class="commentSettingBtn">
-												<input type="text" class="hidden comfirmPw" placeholder="비밀번호를 입력해주세요">
-												<input type="text" class="hidden newPw" placeholder="비밀번호를 입력해주세요">
-											</div>
-										</div>
-									</div>
-									<div class="commentBtn">
-										<input type="button" value="💜" />
-									</div>
-								</div>`
+//	이 아래는 삭제해주세요
+	// function del_commentIpt(event) {
+	// 	let targetElem = event.parentElement
+	// 	let editconBtn = targetElem.childNodes[7];
+	// 	let confirmPassword = targetElem.childNodes[11];
+	// 	let delBtn = targetElem.childNodes[15];
+	// 	let editBtn = targetElem.childNodes[17];
+	//
+	// 	if(confirmPassword.classList.contains('hidden')) {
+	// 		confirmPassword.classList.remove("hidden");
+	// 		delBtn.classList.remove('hidden');
+	// 		delBtn.textContent = '삭제하기'
+	// 		editconBtn.classList.add('hidden');
+	// 	} else {
+	// 		confirmPassword.classList.add("hidden");
+	// 		delBtn.classList.add('hidden');
+	// 		editBtn.classList.add('hidden');
+	// 		editconBtn.classList.remove('hidden');
+	// 		confirmPassword.value = "";
+	// 	}
+	//
+	// 	let targetComment = targetElem.childNodes[1];
+	// 	let targetCommenter = targetElem.childNodes[3].innerText;
+	// 	let targetTime = targetElem.childNodes[5].innerText;
+	//
+	//
+	// 	delBtn.addEventListener('click', () => {
+	// 		if(confirmPassword.value !== "") {
+	// 			del_comment(targetComment, targetCommenter, targetTime, confirmPassword.value)
+	// 		} else {
+	// 			alert('방명록을 삭제하려면 닉네임과 비밀번호를 입력하세요!')
+	// 		}
+	// 	})
+	// }
+	//
+	// function edit_commentIpt(event) {
+	// 	let targetElem = event.parentElement
+	// 	let currentComment = targetElem.childNodes[1].innerText;
+	// 	let currentCommentIpt = targetElem.childNodes[1]
+	// 	let deleteconBtn = targetElem.childNodes[9];
+	// 	let confirmPassword = targetElem.childNodes[11];
+	// 	let newPassword = targetElem.childNodes[13];
+	// 	let editBtn = targetElem.childNodes[17];
+	//
+	// 	if(confirmPassword.classList.contains('hidden') && newPassword.classList.contains('hidden')) {
+	// 		confirmPassword.classList.remove("hidden");
+	//
+	// 		newPassword.classList.remove('hidden');
+	// 		editBtn.classList.remove('hidden');
+	//
+	// 		editBtn.textContent = '수정하기'
+	// 		deleteconBtn.classList.add('hidden');
+	// 	} else {
+	// 		confirmPassword.classList.add("hidden");
+	// 		newPassword.classList.add("hidden");
+	// 		editBtn.classList.add('hidden');
+	// 		deleteconBtn.classList.remove('hidden');
+	//
+	// 		confirmPassword.value = "";
+	// 		newPassword.value = "";
+	// 	}
+	// 	let targetComment = targetElem.childNodes[1];
+	// 	let targetCommenter = targetElem.childNodes[3].innerText;
+	// 	let targetTime = targetElem.childNodes[5].innerText;
+	//
+	// 	editBtn.addEventListener('click', () => {
+	// 		if(confirmPassword.value !== "") {
+	// 			edit_comment(targetComment, targetCommenter, targetTime, confirmPassword.value, newPassword.value)
+	// 		} else {
+	// 			alert('방명록을 수정하려면 비밀번호를 입력하세요!')
+	// 		}
+	// 	})
+	// }
 
-						$('.boardWrap').append(temp_html)
-				}
-			}
-		})
-	}
-*/
+	// function del_comment(comment, nickname, time, password) {
+	// 	console.log(password);
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "/onebillion/delete",
+	// 		data: {
+	// 			del_target_pasword: password,
+	// 		},
+	// 		success: function (response) {
+	// 			alert(response["msg"])
+	// 			window.location.reload();
+	// 		},
+	// 		error: function () {
+	// 			alert('비밀번호가 일치하지 않습니다!')
+	// 		}
+	// 	})
+	// }
+
+	// function del_comment(password){
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "/onebillion/delete",
+	// 		data: { del_password_give: password },
+	// 		success: function (response) {
+	// 			alert(response["msg"])
+	// 			window.location.reload();
+	// 		}
+	// 	});
+	// }
 </script>
 </body>
 </html>

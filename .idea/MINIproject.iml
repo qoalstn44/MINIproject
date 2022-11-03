@@ -10,7 +10,11 @@
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
       <list>
+<<<<<<< HEAD
         <option value="$MODULE_DIR$/taeyoung3/templates" />
+=======
+        <option value="$MODULE_DIR$/taeyoung2/templates" />
+>>>>>>> 1a6c84305a0ba298e12c68c8b2f3b3ddeac3f92b
       </list>
     </option>
   </component>
