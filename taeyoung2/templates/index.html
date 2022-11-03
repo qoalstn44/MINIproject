@@ -49,7 +49,17 @@
 	<section class="members">
 		<div class="container ">
 			<h2 class="maintitle">팀원 소개</h2>
-			<div class="team">
+
+			<div class="inputwrap">
+				<div>
+					<input id="teamName" type="text" placeholder="이름작성"/>
+					<p><textarea id="teamIntro">자기소개 작성 60자이내</textarea></p>
+					<p><input type="text" id="teamPhoto" placeholder="인터넷사진으로 부탁드려요"></p>
+					<button onclick="save_teams()">등록!</button>
+				</div>
+			</div>
+
+			<div class="team" id="team">
 				<div class="item">
 					<div class="img">
 						<div class="rank">팀장</div>
@@ -60,58 +70,9 @@
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
 				</div>
-				
-				<!--				성태영 팀원 추가 -->
-				<div class="item">
-					<div class="img">
-						<div class="rank rank2">팀원</div>
-					</div>
-					<div class="textWrap">
-						<p class="name">
-							<span class="sub_title">이름</span> 성태영
-							<button onclick="likeStar()">✅</button>
-						</p>
-						<p class="txt">안녕하세요? 저는 프론트엔드 개발자를 준비중인 성태영 이라고 합니다. 저는 강아지를 너무 좋아하고 누워있기를 좋아합니다!!</p>
-					</div>
-					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
-				</div>
-				<!--				성태영 팀원추가-->
-				
-				<div class="item">
-					<div class="img">
-						<div class="rank rank2">팀원</div>
-					</div>
-					
-					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
-					</div>
-					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
-				</div>
-			</div>
-			<div class="team">
-				<div class="item">
-					<div class="img">
-						<div class="rank rank2">팀원</div>
-					</div>
-					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
-					</div>
-					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
-				</div>
-				<div class="item">
-					<div class="img">
-						<div class="rank rank2">팀원</div>
-					</div>
-					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
-					</div>
-					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
-				</div>
 			</div>
 		</div>
+
 	</section>
 	<section class="modalLayer"></section>
 	<div class="modalWrap modal1">
@@ -140,7 +101,7 @@
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
-	
+
 	<!--	성태영 수정한 부분입니다-->
 	<div class="modalWrap modal2">
 		<div class="modalCon">
@@ -170,7 +131,7 @@
 		</div>
 	</div>
 	<!--	성태영 수정-->
-	
+
 	<div class="modalWrap modal3">
 		<div class="modalCon">
 			<div class="modalimg"><img
@@ -273,42 +234,107 @@
 </div>
 
 <script>
-	function openModal(modalname) {
-		document.get
-		$('.modalLayer').fadeIn(300)
-		$("." + modalname).fadeIn(300);
-	}
-	
-	function cancel() {
-		$('.modalLayer').fadeOut(300)
-		$(".modalWrap").fadeOut(300);
-	}
-	
-	function show_like() {
-		
-		$.ajax({
-			type: "GET",
-			url: "/like",
-			data: {},
-			success: function (response) {
-					alert(response['msg']);
-			}
-		});
-	}
-	
-	
-	function likeStar(name) {
-		$.ajax({
-			type: 'POST',
-			url: '/like',
-			data: {name_give: name},
-			success: function (response) {
-				alert(response['msg']);
-				window.location.reload()
-			}
-		});
-	}
+    $(document).ready(function () {
+        show_teams();
+    });
 
+    {#모달팝업 시작#}
+
+    function openModal(modalname) {
+        document.get
+        $('.modalLayer').fadeIn(300)
+        $("." + modalname).fadeIn(300);
+    }
+
+    function cancel() {
+        $('.modalLayer').fadeOut(300)
+        $(".modalWrap").fadeOut(300);
+    }
+
+    {#팀원리스트추가 post#}
+
+    function save_teams() {
+        let teamName = $('#teamName').val()
+		    let teamIntro = $('#teamIntro').val()
+		    let teamPhoto = $('#teamPhoto').val()
+
+        $.ajax({
+            type: "POST",
+            url: "/team",
+            data: {teams_give: teamName, intro_give:teamIntro ,photo_give:teamPhoto},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.reload()
+            }
+        });
+    }
+
+    {#추가된팀원 리스트 get#}
+
+    function show_teams() {
+        $.ajax({
+            type: "GET",
+            url: "/team",
+            data: {},
+            success: function (response) {
+                let rows = response['teams']
+                for (let i = 0; i < rows.length; i++) {
+                    let name = rows[i]['teams']
+		                let intro = rows[i]['intro']
+                    let like = rows[i]['like']
+                    let num = rows[i]['num']
+		                let photo = rows[i]['photo']
+
+                    let temp_html = ``
+										if(num === 0){
+                     temp_html = `<div class="item">
+													<div class="img" style="background-image: url('${photo}')">
+														<div class="rank">팀장</div>
+													</div>
+													<div class="textWrap">
+														<div class="name">
+															<span class="sub_title">이름</span>${name}
+															<button class="like" onclick=likeStar(${num})>heart</button><span>${like}</span>
+														</div>
+														<p class="txt">${intro}</p>
+													</div>
+													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
+												</div>`
+		                }else{
+                       temp_html =  `<div class="item">
+													<div class="img" style="background-image: url('${photo}')">
+														<div class="rank rank2">팀원</div>
+													</div>
+													<div class="textWrap">
+														<div class="name">
+															<span class="sub_title">이름</span>${name}
+															<button class="like" onclick=likeStar(${num})>heart</button>
+															<span>${like}</span>
+														</div>
+														<p class="txt">${intro}</p>
+													</div>
+													<a class="btn" href="javascript:openModal('modal${num}')">더보기+</a>
+												</div>`
+										}
+                    $('#team').append(temp_html)
+                }
+            }
+        });
+    }
+
+    {#좋아요 수 늘리기 post#}
+
+    function likeStar(num) {
+        $.ajax({
+            type: 'POST',
+            url: '/api/like',
+            data: {num_give: num},
+            success: function (response) {
+                alert(response['msg']);
+                window.location.reload()
+            }
+        });
+    }
 </script>
 </body>
 </html>

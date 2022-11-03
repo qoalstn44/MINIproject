@@ -335,3 +335,18 @@
     justify-content: center;
     align-items: center;
 }
+
+/*1103 css추가 -성태영*/
+.inputwrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputwrap > div{
+    width: 400px;
+}
+.inputwrap > input, textarea{
+    display: block;
+    width: 100%;
+}
