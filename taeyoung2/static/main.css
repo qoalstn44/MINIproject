@@ -101,13 +101,15 @@
     margin-top: 24px;
 }
 
+/*1103 추가*/
 .item{
     display: flex;
     align-items: center;
     flex-direction:column;
+    justify-content: space-between;
     width:33.33%;
     max-width: 340px;
-
+    height: 400px;
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 15%);
     background: #fff;
     overflow: hidden;
@@ -142,11 +144,17 @@
 .img img{
     width: 100% ;
 }
+/*1103 css 추가*/
 .textWrap{
+    width: 100%;
     padding:24px  ;
 }
 .name{
+    width: 100%;
     margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /*수정1102*/
 .textWrap .txt{
@@ -334,4 +342,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*1103 css추가 -성태영*/
+.inputwrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputwrap > div{
+    width: 400px;
+}
+.inputwrap > input, textarea{
+    display: block;
+    width: 100%;
+}
+
+
+/*1103 4:13 좋아요 추가*/
+@keyframes super {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+.heart{
+    color: red;
+    cursor: pointer;
+}
+.heart i:hover {
+    cursor: pointer;
+    animation: super 1s ease-in-out;
+}
+.heart_one{
+    color:#ccc
 }
