@@ -1,23 +1,16 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>oneBillon</title>
-	<link rel="stylesheet" href="./static/reset.css">
-	<link rel="stylesheet" href="./static/main.css">
+	<link rel="stylesheet" href="../static/reset.css">
+	<link rel="stylesheet" href="../static/main.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-	<script src="https://kit.fontawesome.com/3e498796cb.js" crossorigin="anonymous"></script>
-
 </head>
-
-
-
-
+<body>
 
 <div class="wrap">
 	<section class="header">
@@ -28,7 +21,6 @@
 		<div class="container">
 			<h2 class="maintitle">팀소개</h2>
 			<p class="txt">저희는 A반 1조 onebillion 입니다.엄청나게 일찍발표하게 되어 정말이지부담스럽님만 이나ㅓㄹ이나러ㅣ나러니ㅏ러니ㅏㄹ어니아러니아러니ㅏㅇ러니아러닐어</p>
-
 			<div class="introWrap">
 				<div class="boxes">
 					<div class="box">
@@ -64,36 +56,34 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle1()" id="btnh1" class="like_btn"><i class="fas fa-heart"></i></button>
-
-
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal1')">더보기+</a>
 				</div>
+				
+				<!--				성태영 팀원 추가 -->
 				<div class="item">
 					<div class="img">
 						<div class="rank rank2">팀원</div>
 					</div>
 					<div class="textWrap">
-						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle2()" id="btnh2" class="like_btn"><i class="fas fa-heart"></i></button>
-						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
+						<p class="name">
+							<span class="sub_title">이름</span> 성태영
+							<button onclick="likeStar()">✅</button>
+						</p>
+						<p class="txt">안녕하세요? 저는 프론트엔드 개발자를 준비중인 성태영 이라고 합니다. 저는 강아지를 너무 좋아하고 누워있기를 좋아합니다!!</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal2')">더보기+</a>
 				</div>
+				<!--				성태영 팀원추가-->
+				
 				<div class="item">
 					<div class="img">
 						<div class="rank rank2">팀원</div>
 					</div>
-
+					
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle3()" id="btnh3" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal3')">더보기+</a>
@@ -106,8 +96,6 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle4()" id="btnh4" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal4')">더보기+</a>
@@ -118,8 +106,6 @@
 					</div>
 					<div class="textWrap">
 						<p class="name"><span class="sub_title">이름</span>최지원</p>
-						<!-- 김도훈 좋아요 추가 2022 11 02 16:00 -->
-						<button onclick="Toggle5()" id="btnh5" class="like_btn"><i class="fas fa-heart"></i></button>
 						<p class="txt">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</p>
 					</div>
 					<a class="btn" href="javascript:openModal('modal5')">더보기+</a>
@@ -131,8 +117,7 @@
 	<div class="modalWrap modal1">
 		<div class="modalCon">
 			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>배민수</p>
@@ -155,38 +140,41 @@
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
+	
+	<!--	성태영 수정한 부분입니다-->
 	<div class="modalWrap modal2">
 		<div class="modalCon">
 			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+				src="../MINIproject/사진/ty_img.jpg" alt="강아지">
 			</div>
 			<div class="desc">
 				<p><span>이름</span> 성태영</p>
-				<p><span>MBTI</span>ㅇ랑ㄹㅇ</p>
-				<p><span>취미</span>ㅇㅇ</p>
+				<p><span>MBTI</span> ISFP, ISFJ</p>
+				<p><span>취미</span> 추리드라마 보기, 강아지 산책</p>
 				<p>
 					<span>일 스타일</span>
-				<p class="block">rkdsdkfjlsdfslkfdjlsdkjflsfdjlsj</p>
+				<p class="block">협업을 좋아합니다. 하루에 계획해서 일하기를 좋아하고 그이상의 일은....쉬고싶어요...^^... 칼퇴를 아주 좋아합니다..!</p>
 				</p>
 			</div>
 		</div>
 		<div class="selfIntro">
 			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
-			<p>d앞으로 잘부탁드렵용</p>
+			<p>저는 누워서 추리드라마 시청을 좋아합니다. 강아지들과 산책하기를 즐겨해요</p>
+			<p>여행을 좋아하는데 계획 없는 여행도 좋아합니다</p>
+			<p>하지만 일을 계획해서 하기를 좋아해요</p>
+			<p>저와 친해지시면 강아지사진 많이 보실수 있으세요~ </p>
 		</div>
 		<div class="modalbottom">
-			<a class="blogbtn" herf="#" target="_blank">개인블로그 가기</a>
+			<a class="blogbtn" href="https://velog.io/@young0_0" target="_blank">개인블로그 가기</a>
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
+	<!--	성태영 수정-->
+	
 	<div class="modalWrap modal3">
 		<div class="modalCon">
 			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>최지원</p>
@@ -212,8 +200,7 @@
 	<div class="modalWrap modal4">
 		<div class="modalCon">
 			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>김도훈</p>
@@ -239,8 +226,7 @@
 	<div class="modalWrap modal5">
 		<div class="modalCon">
 			<div class="modalimg"><img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg"
-					alt="강아지">
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/560px-Golde33443.jpg" alt="강아지">
 			</div>
 			<div class="desc">
 				<p><span>이름</span>송지현</p>
@@ -254,7 +240,7 @@
 		</div>
 		<div class="selfIntro">
 			<h3>자기소개</h3>
-			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용ㅇㅇ~~</p>
+			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
 			<p>저는 뭐를 하고 뭐를 하고 뭐를 하는 것을 좋아해용~~</p>
 			<p>d앞으로 잘부탁드렵용</p>
 		</div>
@@ -263,8 +249,6 @@
 			<span class="cancel" onclick="cancel()">닫기</span>
 		</div>
 	</div>
-
-
 	<section class="comment">
 		<div class="container">
 			<h2 class="maintitle">우리팀을 응원해주세요!</h2>
@@ -285,120 +269,8 @@
 			</div>
 		</div>
 	</section>
+
 </div>
-
-<script>
-
-
-
-	//<!-- 김도훈 좋아요 추가 2022 11 03 01:00 -->
-
-	// 좋아요 버튼 1
-	var btnvar1 = document.getElementById('btnh1')
-	const status1 = localStorage.getItem('like1')
-
-	if (status1 === 'true') {
-		btnvar1.style.color = "red"
-	} else {
-		btnvar1.style.color = "grey"
-	}
-	function Toggle1() {
-
-		const status1 = localStorage.getItem('like1')
-		if (status1 === 'true') {
-			localStorage.setItem('like1', 'false')
-			btnvar1.style.color = "grey"
-		} else {
-			localStorage.setItem('like1', 'true')
-			btnvar1.style.color = "red"
-		}
-	}
-	// 좋아요 버튼 2 
-	var btnvar2 = document.getElementById('btnh2')
-	const status2 = localStorage.getItem('like2')
-
-	if (status2 === 'true') {
-		btnvar2.style.color = "red"
-	} else {
-		btnvar2.style.color = "grey"
-	}
-	function Toggle2() {
-
-		const status2 = localStorage.getItem('like2')
-		if (status2 === 'true') {
-			localStorage.setItem('like2', 'false')
-			btnvar2.style.color = "grey"
-		} else {
-			localStorage.setItem('like2', 'true')
-			btnvar2.style.color = "red"
-		}
-	}
-
-
-	//좋아요 버튼3
-	var btnvar3 = document.getElementById('btnh3')
-	const status3 = localStorage.getItem('like3')
-
-	if (status3 === 'true') {
-		btnvar3.style.color = "red"
-	} else {
-		btnvar3.style.color = "grey"
-	}
-	function Toggle3() {
-
-		const status3 = localStorage.getItem('like3')
-		if (status3 === 'true') {
-			localStorage.setItem('like3', 'false')
-			btnvar3.style.color = "grey"
-		} else {
-			localStorage.setItem('like3', 'true')
-			btnvar3.style.color = "red"
-		}
-	}
-
-
-	// 좋아요 버튼 4
-	var btnvar4 = document.getElementById('btnh4')
-	const status4 = localStorage.getItem('like4')
-
-	if (status4 === 'true') {
-		btnvar4.style.color = "red"
-	} else {
-		btnvar4.style.color = "grey"
-	}
-	function Toggle4() {
-
-		const status4 = localStorage.getItem('like4')
-		if (status4 === 'true') {
-			localStorage.setItem('like4', 'false')
-			btnvar4.style.color = "grey"
-		} else {
-			localStorage.setItem('like4', 'true')
-			btnvar4.style.color = "red"
-		}
-	}
-	// 좋아요 버튼 5
-	var btnvar5 = document.getElementById('btnh5')
-	const status5 = localStorage.getItem('like5')
-
-	if (status5 === 'true') {
-		btnvar5.style.color = "red"
-	} else {
-		btnvar5.style.color = "grey"
-	}
-	function Toggle5() {
-
-		const status5 = localStorage.getItem('like5')
-		if (status5 === 'true') {
-			localStorage.setItem('like5', 'false')
-			btnvar5.style.color = "grey"
-		} else {
-			localStorage.setItem('like5', 'true')
-			btnvar5.style.color = "red"
-		}
-	}
-</script>
-
 
 <script>
 	function openModal(modalname) {
@@ -406,17 +278,37 @@
 		$('.modalLayer').fadeIn(300)
 		$("." + modalname).fadeIn(300);
 	}
-
+	
 	function cancel() {
 		$('.modalLayer').fadeOut(300)
 		$(".modalWrap").fadeOut(300);
 	}
+	
+	function show_like() {
+		
+		$.ajax({
+			type: "GET",
+			url: "/like",
+			data: {},
+			success: function (response) {
+					alert(response['msg']);
+			}
+		});
+	}
+	
+	
+	function likeStar(name) {
+		$.ajax({
+			type: 'POST',
+			url: '/like',
+			data: {name_give: name},
+			success: function (response) {
+				alert(response['msg']);
+				window.location.reload()
+			}
+		});
+	}
 
 </script>
-
-
-
-
 </body>
-
 </html>
